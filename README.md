@@ -1,5 +1,49 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
+
+---
+
+## Install
+
+Go to the project root and run the following commands to install composer and then install laravel
+
+```shell
+$ php composer-setup.php
+$ php composer.phar install
+```
+
+Run the following commands to create and edit the `.env` file
+
+```shell
+$ cp .env.example .env
+$ nano .env
+```
+
+Set up your database and enter the credentials as follows, and save:
+
+```
+DB_DATABASE=???
+DB_USERNAME=???
+DB_PASSWORD=???
+```
+
+Run the following commands to create the database tables, and seed them with initial data
+
+```shell
+$ php artisan key:generate
+$ php artisan migrate
+$ php artisan db:seed
+```
+
+The following command should solve laravel permission issues with the storage and public directories
+
+```
+$ chown -R www-data:www-data storage
+$ chown -R www-data:www-data public
+```
+
+
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
@@ -76,3 +120,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
