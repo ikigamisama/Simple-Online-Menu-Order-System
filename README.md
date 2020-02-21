@@ -35,6 +35,12 @@ $ php artisan migrate
 $ php artisan db:seed
 ```
 
+Run it with this
+
+```
+$ php artisan serve
+```
+
 The following command should solve laravel permission issues with the storage and public directories
 
 ```
